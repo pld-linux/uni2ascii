@@ -1,12 +1,12 @@
 Summary:	Conversion tools between UTF-8 Unicode and 7-bit ASCII equivalents
 Summary(pl.UTF-8):	Narzędzia do konwersji pomiędzy UTF-8 a 7-bitowymi zamiennikami ASCII
 Name:		uni2ascii
-Version:	4.13
+Version:	4.14
 Release:	1
 License:	GPL v3+
 Group:		Applications
 Source0:	http://billposer.org/Software/Downloads/%{name}-%{version}.tar.bz2
-# Source0-md5:	9041783bb71b9ea714f151802c6f864a
+# Source0-md5:	b26f3ac559ccd69161b93c2f4fed5f14
 URL:		http://billposer.org/Software/uni2ascii.html
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -22,6 +22,7 @@ uni2ascii oraz ascii2uni pozwalają na konwersję w obu kierunkach
 pomiędzy kodowaniem Unicode UTF-8 a ponad trzydziestoma 7-bitowymi
 zamiennikami ASCII, w których skład wchodzi format RFC 2396 URI oraz
 format RFC 2045 Quoted Printable.
+
 %prep
 %setup -q
 
@@ -30,7 +31,8 @@ format RFC 2045 Quoted Printable.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure
+%configure \
+	CPPFLAGS="%{rpmcflags}"
 %{__make}
 
 %install
