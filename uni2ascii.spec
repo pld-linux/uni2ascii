@@ -1,12 +1,12 @@
 Summary:	Conversion tools between UTF-8 Unicode and 7-bit ASCII equivalents
 Summary(pl.UTF-8):	Narzędzia do konwersji pomiędzy UTF-8 a 7-bitowymi zamiennikami ASCII
 Name:		uni2ascii
-Version:	4.15
+Version:	4.16
 Release:	1
 License:	GPL v3+
 Group:		Applications
 Source0:	http://billposer.org/Software/Downloads/%{name}-%{version}.tar.bz2
-# Source0-md5:	030c50d6c788eee9ff38e064dc56bf1b
+# Source0-md5:	8ef1ccdcff4d9a04618add2283b9a541
 URL:		http://billposer.org/Software/uni2ascii.html
 BuildRequires:	autoconf
 BuildRequires:	automake
